@@ -6,20 +6,25 @@ body {
 
 .todo__section {
   font-size: 18px;
-  box-shadow: 0 2px 2px 2px #c9c5c5;
-  width: 50%;
+  box-shadow: 0 3px 3px 3px #c9c5c5;
+  width: 80%;
 }
 
 .todo__div {
   display: flex;
   flex-direction: column;
-  padding: 20px;
 }
 
 .todo__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
+}
+
+form {
+  border-top: 1px solid #c9c5c5;
+  padding: 0 10px;
 }
 
 input[type=text] {
@@ -44,6 +49,7 @@ input[type=checkbox] {
 .form__group {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .list__div {
@@ -51,7 +57,9 @@ input[type=checkbox] {
   justify-content: space-between;
   gap: 10px;
   list-style: none;
-  padding: 0;
+  border-top: 1px solid #c9c5c5;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .task__li {
@@ -67,6 +75,7 @@ input[type=checkbox] {
 .item__div {
   display: flex;
   gap: 5px;
+  padding: 20px 0;
 }
 
 .completed {
@@ -80,4 +89,9 @@ input[type=checkbox] {
   border-top: 1px solid #c9c5c5;
   padding: 10px;
   width: 100%;
+}
+
+#todoList {
+  padding: 0;
+  list-style-type: none;
 }
