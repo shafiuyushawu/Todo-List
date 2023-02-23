@@ -1,14 +1,16 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .todo__section {
   font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   box-shadow: 0 2px 2px 2px #c9c5c5;
   width: 50%;
 }
 
 .todo__div {
-  width: 90%;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -77,4 +79,5 @@ input[type=checkbox] {
   border: none;
   border-top: 1px solid #c9c5c5;
   padding: 10px;
+  width: 100%;
 }
