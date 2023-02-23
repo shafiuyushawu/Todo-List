@@ -31,7 +31,7 @@ A simple application to keep track of activities
 
 - HTML
 - JS
-- Tailwind CSS
+- CSS
 
 ### Tech Stack <a name="tech-stack">N/A</a>
 
@@ -58,14 +58,12 @@ A simple application to keep track of activities
 
 <!-- Features -->
 
-### Key Features <a name="key-features"></a>
+### Key Feature <a name="key-features"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
- - Stores the title and author of a book to an array of object
- - Display the items of the object to the screen for users
- - User can also remove a book and author with a remove button.
+ - Displays list of todos and indicates weather complete or not with line strike through
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,33 +91,6 @@ cd Todo List
 ```
 
 
-**Run the following command to use `Tailwind css` and `Daisyui` class:**
-
-1. Copy and paste below in your terminal install taiwind.css:
-      ```bash
-        npm install -D tailwindcss
-      ``
-2. Copy and paste below to initialize `tailwind.config.js`
-      ```bash
-        npx tailwindcss init
-      ``
-3. Copy and paste below to replace all the lines in `tailwind.config.js`
-      ```bash
-        /** @type {import('tailwindcss').Config} */
-        module.exports = {
-          content: ["./src/**/*.{html,js}"],
-          theme: {
-            extend: {},
-          },
-          plugins: [require('daisyui')],
-        }
-      ``
-4. Copy and paste below to install daisy ui packages.
-      ```bash
-        npm install daisyui
-      ``
-
-5. Now open with live server
 
 ### Install
 
@@ -135,7 +106,10 @@ npm install
 
 To run the project, execute the following command: 
 
-- Open with live server
+- Excute below command in the terminal to serve live 
+```bash
+npm run dev
+```
 
 
 ## Run Test for Linters
