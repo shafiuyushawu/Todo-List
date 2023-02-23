@@ -143,11 +143,11 @@ You can deploy this project using:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHOR -->
 
-## 👥 Author: <a name="authors">Shafiu Ibn Yushawu && Hiwot Bayissa</a>
+## 👥 Author: <a name="authors">Shafiu Ibn Yushawu</a>
 
 👤 **Authors**
 
-- GitHub: [@shafiuyushawu](https://github.com/shafiuyushawu),  [@hiwina](https://github.com/hiwina)
+- GitHub: [@shafiuyushawu](https://github.com/shafiuyushawu),
 - Twitter: [@shafiuyushawu](https://twitter.com/shafiuyushawu)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -155,8 +155,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Implement object with classes
-- Create a complete website with navbar and footer
+- Implement input for users to add todso.
+- Create a function to receive user interaction to strike through todos.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
