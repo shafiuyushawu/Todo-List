@@ -1,3 +1,80 @@
+.todo__section {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 2px 2px 2px #c9c5c5;
+  width: 50%;
+}
+
+.todo__div {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.todo__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type=text] {
+  font-size: 15px;
+  width: 200px;
+  padding: 20px;
+  border: none;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+input[type=text]::placeholder {
+  font-style: italic;
+}
+
+input[type=checkbox] {
+  padding: 5px;
+}
+
+.form__group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list__div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.task__li {
+  padding: 0;
+  list-style: none;
+}
+
+.task__ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item__div {
+  display: flex;
+  gap: 5px;
+}
+
 .completed {
   text-decoration: line-through;
+  justify-content: space-between;
+}
+
+.clear__completed {
+  font-size: 18px;
+  border: none;
+  border-top: 1px solid #c9c5c5;
+  padding: 10px;
 }
