@@ -1,43 +1,61 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/modules/todoList.js":
+/***/ "./src/modules/TodoList.js":
 /*!*********************************!*\
-  !*** ./src/modules/todoList.js ***!
+  !*** ./src/modules/TodoList.js ***!
   \*********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var todoList = /*#__PURE__*/function () {
-  function todoList(tasks) {
-    _classCallCheck(this, todoList);
+var TodoList = /*#__PURE__*/function () {
+  function TodoList(tasks) {
+    _classCallCheck(this, TodoList);
     this.tasks = tasks;
   }
-  _createClass(todoList, [{
+  _createClass(TodoList, [{
     key: "render",
     value: function render() {
-      var list = document.getElementById("todoList");
-      list.innerHTML = "";
+      var list = document.getElementById('todoList');
+      list.innerHTML = '';
       this.tasks.sort(function (a, b) {
         return a.index - b.index;
       });
       this.tasks.forEach(function (task) {
-        var listItem = document.createElement("li");
-        listItem.innerText = task.description;
+        var listDiv = document.createElement('ul');
+        listDiv.classList.add('list__div');
+        var listItem = document.createElement('li');
+        var checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.name = 'checkbox';
+        var ellipses = document.createElement('span');
+        ellipses.innerHTML = "<i id=\"edit\" class=\"fa-solid fa-ellipsis-vertical\"></i>";
+        var todoText = document.createElement('span');
+        todoText.innerText = task.description;
         if (task.completed) {
-          listItem.className = '';
+          listItem.classList.add('completed');
         }
-        list.appendChild(listItem);
+        list.appendChild(listDiv);
+        listDiv.appendChild(checkbox);
+        listDiv.appendChild(listItem);
+        listItem.appendChild(todoText);
+        listItem.appendChild(ellipses);
       });
     }
   }]);
-  return todoList;
+  return TodoList;
 }();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodoList);
 
 /***/ }),
 
@@ -47,7 +65,6 @@ var todoList = /*#__PURE__*/function () {
   \*******************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -61,7 +78,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "h1 {\r\n    color: red;\r\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,UAAU;AACd","sourcesContent":["h1 {\r\n    color: red;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".todo__section {\r\n  font-size: 18px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  box-shadow: 0 2px 2px 2px #c9c5c5;\r\n  width: 100%;\r\n}\r\n\r\n\r\n.todo__div {\r\n  width: 90%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  padding: 20px;\r\n}\r\n\r\n.todo__title {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\ninput[type=text] {\r\n  font-size: 15px;\r\n  width: 200px;\r\n  padding: 20px;\r\n  border: none;\r\n  color: aliceblue;\r\n}\r\n\r\ninput[type=text]:focus {\r\n  outline: none;\r\n}\r\n\r\ninput[type=text]::placeholder {\r\n  font-style: italic;\r\n}\r\n\r\ninput[type=checkbox] {\r\n  padding: 5px;\r\n}\r\n\r\n.form__group {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.list__div {\r\n  /* display: flex; */\r\n  gap: 10px;\r\n  list-style: none;\r\n  padding: 0;\r\n}\r\n\r\n.completed {\r\n  text-decoration: line-through;\r\n  display: flex;\r\n  justify-content: space-between;\r\n\r\n}\r\n\r\n.clear__completed {\r\n  font-size: 18px;\r\n  border: none;\r\n  border-top: 1px solid #c9c5c5;\r\n  padding: 10px;\r\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,iCAAiC;EACjC,WAAW;AACb;;;AAGA;EACE,UAAU;EACV,aAAa;EACb,sBAAsB;EACtB,aAAa;AACf;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,aAAa;EACb,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;EACb,8BAA8B;AAChC;;AAEA;EACE,mBAAmB;EACnB,SAAS;EACT,gBAAgB;EAChB,UAAU;AACZ;;AAEA;EACE,6BAA6B;EAC7B,aAAa;EACb,8BAA8B;;AAEhC;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,6BAA6B;EAC7B,aAAa;AACf","sourcesContent":[".todo__section {\r\n  font-size: 18px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  box-shadow: 0 2px 2px 2px #c9c5c5;\r\n  width: 100%;\r\n}\r\n\r\n\r\n.todo__div {\r\n  width: 90%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  padding: 20px;\r\n}\r\n\r\n.todo__title {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\ninput[type=text] {\r\n  font-size: 15px;\r\n  width: 200px;\r\n  padding: 20px;\r\n  border: none;\r\n  color: aliceblue;\r\n}\r\n\r\ninput[type=text]:focus {\r\n  outline: none;\r\n}\r\n\r\ninput[type=text]::placeholder {\r\n  font-style: italic;\r\n}\r\n\r\ninput[type=checkbox] {\r\n  padding: 5px;\r\n}\r\n\r\n.form__group {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.list__div {\r\n  /* display: flex; */\r\n  gap: 10px;\r\n  list-style: none;\r\n  padding: 0;\r\n}\r\n\r\n.completed {\r\n  text-decoration: line-through;\r\n  display: flex;\r\n  justify-content: space-between;\r\n\r\n}\r\n\r\n.clear__completed {\r\n  font-size: 18px;\r\n  border: none;\r\n  border-top: 1px solid #c9c5c5;\r\n  padding: 10px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -74,7 +91,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "h1 {\r\n    color: red;\r\n}", "",{"ve
   \*****************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /*
@@ -169,7 +185,6 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 module.exports = function (item) {
@@ -195,7 +210,6 @@ module.exports = function (item) {
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -250,7 +264,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var stylesInDOM = [];
@@ -364,7 +377,6 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var memo = {};
@@ -413,7 +425,6 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -434,7 +445,6 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -456,7 +466,6 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -536,7 +545,6 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -630,35 +638,37 @@ module.exports = styleTagTransform;
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _modules_todoList_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/todoList.js */ "./src/modules/todoList.js");
-/* harmony import */ var _modules_todoList_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_todoList_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_TodoList_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/TodoList.js */ "./src/modules/TodoList.js");
 
 
 var tasks = [{
-  description: "Buy groceries",
-  completed: false,
+  description: 'Go to the gym',
+  completed: true,
   index: 1
 }, {
-  description: "Walk the dog",
+  description: 'Go to canteen for food',
   completed: true,
   index: 2
 }, {
-  description: "Do laundry",
+  description: 'Do laundry',
   completed: false,
   index: 3
+}, {
+  description: 'Cook for family dinner',
+  completed: false,
+  index: 4
 }];
-var todo = new (_modules_todoList_js__WEBPACK_IMPORTED_MODULE_1___default())(tasks);
-todo.render();
+var todoList = new _modules_TodoList_js__WEBPACK_IMPORTED_MODULE_1__["default"](tasks);
+todoList.render();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlec54db5a9c7049f607245.js.map
+//# sourceMappingURL=bundle9db33bef5ce671cb530b.js.map

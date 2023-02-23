@@ -1,4 +1,4 @@
 function generateJoke() {
-    return "Fuck you"
+  return 'Fuck you';
 }
 export default generateJoke;
