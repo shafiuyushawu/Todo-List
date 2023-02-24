@@ -60,10 +60,15 @@ A simple application to keep track of activities
 
 ### Key Feature <a name="key-features"></a>
 
+ - Displays list of todos and indicates weather complete or not with line strike through
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
- - Displays list of todos and indicates weather complete or not with line strike through
+
+### Live Demo
+
+https://shafiuyushawu.github.io/Todo-List/dist/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
