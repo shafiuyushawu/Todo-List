@@ -21,8 +21,7 @@ const displayTodos = () => {
     checkbox.type = 'checkbox';
     checkbox.name = 'checkbox';
     checkbox.id = 'checkBox';
-    checkbox.checked = task.completed; // Set the checked status based on the task's completed property
-
+    checkbox.checked = task.completed;
     const ellipses = document.createElement('span');
     const moveIcon = document.createElement('i');
     moveIcon.className = 'fa-solid fa-ellipsis-vertical';
