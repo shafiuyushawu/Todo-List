@@ -5,28 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/10e6eafe5a.js" crossorigin="anonymous"></script>
-<script defer src="bundle9db33bef5ce671cb530b.js"></script></head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script defer src="bundlebf511b2c7871ace523e0.js"></script></head>
 
 <body>
     <section class="todo__section">
         <div class="todo__div">
-            <span class="todo__title">
+            <div class="todo__title">
                 <p class="">Today's To Do</p>
                 <i class="fa-solid fa-arrows-rotate icon" id="refresh"></i>
-            </span>
-            <form action="">
+            </div>
+            <form id="todoForm">
                 <div class="form__group">
-                    <input type="text" placeholder="Add to your list...">
-                    <i class="fa-solid fa-arrow-right-to-bracket" id="addbtn"></i>
+                    <input id="todoDescription" type="text" placeholder="Add to your list...">
+                    <button class="submitBtn" type="submit">
+                        <i class="fa-solid fa-arrow-right-to-bracket" id="addButton"></i>
+                    </button>
                 </div>
             </form>
-            <div id="todoList">
+            <div id="todoList" class="">
             </div>
         </div>
-        <button class="clear__completed">Clear all completed</button>
+        <button type="button" id="clearCompleted" class="clear__completed">Clear all completed</button>
     </section>
 
     <script type="module" src="./index.js"></script>
 </body>
-
-</html>
