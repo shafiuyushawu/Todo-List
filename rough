@@ -1,0 +1,15 @@
+static remove = () => {
+    const removeIcon = document.querySelectorAll('.remove');
+    const arr = [];
+    removeIcon.forEach((icon) => {
+        icon.addEventListener('click', (event) => {
+            let todoList = JSON.parse(localStorage.getItem('todoList') || arr);
+            todoList = todoList.filter((todo) => todo.id !== event.target.id);
+            todoList.forEach((todo, i) => {
+                todo.index = i + 1;
+            });
+            localStorage.setItem('todoList', JSON.stringify(todoList));
+            window.location.reload();
+        });
+    });
+}

@@ -1,11 +1,8 @@
 import './style.css';
-import TodoList from './modules/TodoList.js';
+import addTodos from './modules/addTodos.js';
+import displayTodos from './modules/displayTodos.js';
+import editTodos from './modules/editTodos.js';
 
-const tasks = [
-  { description: 'Go to the gym', completed: true, index: 1 },
-  { description: 'Go to canteen for food', completed: false, index: 2 },
-
-];
-
-const todoList = new TodoList(tasks);
-todoList.render();
+addTodos();
+displayTodos();
+editTodos();

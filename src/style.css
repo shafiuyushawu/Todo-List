@@ -91,6 +91,28 @@ input[type=checkbox] {
   width: 100%;
 }
 
+.todoText {
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.todoText:focus {
+  outline: none;
+}
+
+.deletebtn {
+  border: none;
+}
+
+.deleteIcon {
+  width: 80%;
+}
+
+.submitBtn {
+  border: none;
+}
+
 #todoList {
   padding: 0;
   list-style-type: none;
