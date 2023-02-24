@@ -1,4 +1,5 @@
 import Todos from './Todos.js';
+import completeTask from './completeTask.js';
 import removeIcon from './assets/remove.png';
 
 const displayTodos = () => {
@@ -20,7 +21,7 @@ const displayTodos = () => {
     checkbox.type = 'checkbox';
     checkbox.name = 'checkbox';
     checkbox.id = 'checkBox';
-
+    checkbox.checked = task.completed;
     const ellipses = document.createElement('span');
     const moveIcon = document.createElement('i');
     moveIcon.className = 'fa-solid fa-ellipsis-vertical';
@@ -31,7 +32,8 @@ const displayTodos = () => {
     deleteIcon.src = removeIcon;
     deleteIcon.className = 'deleteIcon';
     const todoText = document.createElement('input');
-    todoText.className = 'todoText';
+    todoText.type = 'text';
+    todoText.className = 'todoText ';
     todoText.readOnly = true;
     todoText.value = task.description;
 
@@ -42,6 +44,15 @@ const displayTodos = () => {
       todos.reindexTasks();
       listDiv.remove();
       todos.saveTasks();
+    });
+
+    checkbox.addEventListener('change', () => {
+      completeTask(task.index, checkbox.checked);
+      if (checkbox.checked) {
+        todoText.classList.add('completed');
+      } else {
+        todoText.classList.remove('completed');
+      }
     });
 
     list.appendChild(listDiv);

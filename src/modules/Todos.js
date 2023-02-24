@@ -54,6 +54,11 @@ class Todos {
     this.tasks = [];
     this.saveTasks();
   }
+
+  clearIncompleteTasks() {
+    this.tasks = this.tasks.filter((task) => !task.completed);
+    this.reindexTasks();
+  }
 }
 
 export default Todos;

@@ -80,7 +80,6 @@ input[type=checkbox] {
 
 .completed {
   text-decoration: line-through;
-  justify-content: space-between;
 }
 
 .clear__completed {
