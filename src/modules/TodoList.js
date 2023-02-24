@@ -1,6 +1,15 @@
+import newTask from './newTask.js'
+import saveTask from './saveTask.js';
 class TodoList {
   constructor(tasks) {
-    this.tasks = tasks;
+    this.tasks = []
+  }
+
+  addTask(description) {
+    const newTask = new Task();
+    tasks.push(newTask)
+    saveTask()
+    return newTask;
   }
 
   render() {
