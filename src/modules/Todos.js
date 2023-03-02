@@ -1,9 +1,12 @@
-class Todos {
+export class Todos {
   constructor() {
     this.tasks = [];
   }
 
   addTask(description) {
+    if (description.trim() === '') {
+      return;
+    }
     const newTask = {
       description,
       completed: false,
@@ -23,6 +26,9 @@ class Todos {
   }
 
   deleteTask(index) {
+    if (index < 1 || index > this.tasks.length) {
+      return;
+    }
     this.tasks.splice(index - 1, 1);
     this.reindexTasks();
     this.saveTasks();
@@ -60,5 +66,3 @@ class Todos {
     this.reindexTasks();
   }
 }
-
-export default Todos;
