@@ -1,6 +1,6 @@
 import Todos from './Todos.js';
 import completeTask from './completeTask.js';
-import removeIcon from './assets/remove.png';
+import removeIcon from '../assets/remove.png';
 
 const displayTodos = () => {
   const todos = new Todos();

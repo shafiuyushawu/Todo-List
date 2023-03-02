@@ -56,14 +56,18 @@ class Todos {
     }
   }
 
-  clearAllTask() {
-    this.tasks = [];
+  clearCompletedTasks() {
+    this.tasks = this.tasks.filter((task) => !task.completed);
+    this.reindexTasks();
     this.saveTasks();
   }
 
-  clearIncompleteTasks() {
-    this.tasks = this.tasks.filter((task) => !task.completed);
-    this.reindexTasks();
+  updateTaskCompletion(index, newCompletionStatus) {
+    if (index < 1 || index > this.tasks.length) {
+      return;
+    }
+    this.tasks[index - 1].completed = newCompletionStatus;
+    this.saveTasks();
   }
 }
 
