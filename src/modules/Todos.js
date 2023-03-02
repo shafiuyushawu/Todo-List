@@ -1,4 +1,4 @@
-export class Todos {
+class Todos {
   constructor() {
     this.tasks = [];
   }
@@ -66,3 +66,5 @@ export class Todos {
     this.reindexTasks();
   }
 }
+
+module.exports = Todos;
